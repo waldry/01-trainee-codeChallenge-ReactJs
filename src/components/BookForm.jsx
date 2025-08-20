@@ -1,0 +1,70 @@
+export default function BookForm({ formValue, onChange, onSubmit }) {
+  return (
+    <form onSubmit={onSubmit}>
+      <label>
+        Number:
+        <input
+          type="number"
+          name="number"
+          value={formValue.number}
+          onChange={onChange}
+        />
+      </label>
+      <label>
+        Title:
+        <input
+          type="text"
+          name="title"
+          value={formValue.title}
+          onChange={onChange}
+        />
+      </label>
+      <label>
+        Original Title:
+        <input
+          type="text"
+          name="originalTitle"
+          value={formValue.originalTitle}
+          onChange={onChange}
+        />
+      </label>
+      <label>
+        Description:
+        <input
+          type="text"
+          name="description"
+          value={formValue.description}
+          onChange={onChange}
+        />
+      </label>
+      <label>
+        Pages:
+        <input
+          type="number"
+          name="pages"
+          value={formValue.pages}
+          onChange={onChange}
+        />
+      </label>
+      <label>
+        Cover:
+        <input
+          type="text"
+          name="cover"
+          value={formValue.cover}
+          onChange={onChange}
+        />
+      </label>
+      <label>
+        Index:
+        <input
+          type="number"
+          name="index"
+          value={formValue.index}
+          onChange={onChange}
+        />
+      </label>
+      <button type="submit">Submit the new book</button>
+    </form>
+  );
+}
