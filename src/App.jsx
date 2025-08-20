@@ -35,7 +35,22 @@ function App() {
   });
 
   const handleSubmit = (e) => {
+    //Prevent Default
     e.preventDefault();
+    //Submit new book to the all books array
+    setBooks((prev) => [...prev, newBook]);
+    //Close the modal
+    setIsModalVisible(false);
+    //Clean up the form
+    setNewBook({
+      number: 0,
+      title: "",
+      originalTitle: "",
+      description: "",
+      pages: 0,
+      cover: "",
+      index: 0,
+    });
   };
 
   const handleFormChange = (e) => {
